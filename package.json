@@ -1,0 +1,26 @@
+{
+  "name": "weather-cli",
+  "version": "1.0.0",
+  "description": "for getting weather",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "weather"
+  ],
+  "author": "Vadim Belinovich",
+  "license": "ISC",
+  "homepage": "https://belinovich.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://belinovich.com/"
+  },
+  "bugs": {
+    "url": "https://belinovich.com/",
+    "email": "vadimbelinovich@gmail.com"
+  }
+}
