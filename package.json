@@ -2,8 +2,11 @@
   "name": "weather-cli",
   "version": "1.0.0",
   "description": "for getting weather",
-  "main": "index.js",
-  "bin": "./index.js",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +25,10 @@
   "bugs": {
     "url": "https://belinovich.com/",
     "email": "vadimbelinovich@gmail.com"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^5.0.1",
+    "dedent": "^0.7.0"
   }
 }
