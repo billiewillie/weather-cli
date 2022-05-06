@@ -1,15 +1,15 @@
 import chalk from 'chalk';
 import dedent from 'dedent';
 
-const printError = (error) => {
+export const printError = (error) => {
   console.log(chalk.bgRed(` ERROR ${error} `));
 };
 
-const printSuccess = (success) => {
+export const printSuccess = (success) => {
   console.log(chalk.bgGreen(` SUCCESS ${success} `));
 };
 
-const printHelp = () => {
+export const printHelp = () => {
   console.log(
     dedent`${chalk.bgCyan(' HELP ')}
     Без параметров - вывод погоды
@@ -20,8 +20,13 @@ const printHelp = () => {
   );
 };
 
-export {
-  printError, 
-  printSuccess,
-  printHelp
+export const printWeather = (res, icon) => {
+  console.log(
+    dedent`${chalk.bgGreen(' SUCCESS ')} weather in ${res.name}
+    ${icon}  ${res.weather[0].description}
+    Tempretature: ${res.main.temp}C Feels like ${res.main.feels_like}C
+    Humidity: ${res.main.humidity}%
+    Wind: ${res.wind.speed}m/s
+    `
+  );
 };
